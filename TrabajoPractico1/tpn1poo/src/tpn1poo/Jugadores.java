@@ -41,12 +41,24 @@ public class Jugadores {
 	public String toString() {
 		return "Jugadores [username=" + username + ", vivo=" + vivo + ", eliminado=" + eliminado + "]";
 	}
-	
+	public String JugadoresSupers (String username) {
+		for (int i = 0; i <=3; i++) {
+			username=JOptionPane.showInputDialog("Ingrese el nombre de usuario del jugador superviviente " + i);
+		}
+		return username;
+
+	}
+	public String JugadoresZombies (String username) {
+		for (int i = 0; i <=3; i++) {
+			username=JOptionPane.showInputDialog("Ingrese el nombre de usuario del jugador zombie" + i);
+		}
+		return username;
+	}
 	public boolean Vivo(boolean vivo) {
 		return true;
 	}
 	public boolean Eliminado(boolean eliminado) {
-		return true;
+		return false;
 	}
 	
 	

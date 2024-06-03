@@ -16,8 +16,8 @@ public class Equipo extends Jugadores{
 		return ListaJugadores;
 	}
 
-	public void setListaJugadores(LinkedList<Jugadores> listaJugadores) {
-		ListaJugadores = listaJugadores;
+	public void setListaJugadores(LinkedList<Jugadores> ListaJugadores) {
+		this.ListaJugadores = ListaJugadores;
 	}
 
 	public int getCapitulos() {
@@ -31,44 +31,41 @@ public class Equipo extends Jugadores{
 	public String toString() {
 		return "Equipo [ListaJugadores=" + ListaJugadores + ", capitulos=" + capitulos + "]";
 	}
-	public boolean Capitulos(int capitulos){
-		capitulos=this.setCapitulos(getCapitulos());
-		if (this.setCapitulos(capitulos)<=5) {
-			return true;
-	} else {
-			return false;
-	}
-}
-	public static LinkedList ListaJugadores(LinkedList ListaJugadores){
-		ListaJugadores.add(ListaJugadores);
-		if (ListaJugadores.size()<=4) {
+	
+	public static String ListaJugadores(String username){
+		Jugadores jugadores=new Jugadores(username, null, null);
+		
+		if (username<=4) {
 			JOptionPane.showMessageDialog(null, "El equipo ya tiene 4 jugadores.");
         } else {
         	JOptionPane.showMessageDialog(null, "El equipo no tiene 4 jugadores.");
         }
-		return ListaJugadores;	
+		return username;	
 	}
-	public int calcularPuntosSupervivientes() {
-        int puntos = 0;
-        boolean todosVivos = true;
-        for (Jugadores jugador : ListaJugadores) {
-            if (jugador.isVivo()) {
-                puntos += 500 / ListaJugadores.size();
-            } else {
-                todosVivos = false;
-            }
-        }
-        if (todosVivos) {
-            puntos += 100;
-        }
-        return puntos;
-    }
+	 //public boolean calcularPuntosSupervivientes() {
+		 // int puntos = 0;
+        // boolean Vivos = true;
+        //boolean Eliminados = false;
+        //for (Jugadores jugador:ListaJugadores) {
+        	 //  if (jugador.Vivo(isVivo())) {
+            	 //     puntos += 500 / ListaJugadores.size();
+                // } else if (jugador.Eliminado(isEliminado())) {
+            	 //	return Eliminados=true;
+				 //}
+            //  }
+        //if (Vivos) {
+        //   puntos += 100;
+        //}
+        //return puntos;
+        
+	 //}
 
     public int calcularPuntosZombies() {
-        int dañoTotal = (int) (Math.random() * 600); // Daño aleatorio entre 0 y 600
+    	ListaJugadores(ListaJugadores);
+        int dañoTotal = (int) (Math.random() * 600);
         int puntos = dañoTotal;
         if (dañoTotal >= 500) {
-            puntos += 25; // Bonificación por daño alto
+            puntos += 25; 
         }
         return puntos;
     }
