@@ -4,14 +4,17 @@ import java.util.LinkedList;
 
 import javax.swing.JOptionPane;
 
-public class Equipo extends Jugadores{
-	public Equipo(String username, String vivo, String eliminado) {
-		super(username, vivo, eliminado);
-		// TODO Auto-generated constructor stub
-	}
+public class Equipo{
 	private LinkedList<Jugadores> ListaJugadores=new LinkedList<Jugadores>();
 	private int capitulos;
 	
+	
+	
+	public Equipo(int capitulos) {
+		super();
+		this.capitulos = capitulos;
+	}
+
 	public LinkedList<Jugadores> getListaJugadores() {
 		return ListaJugadores;
 	}
@@ -32,15 +35,9 @@ public class Equipo extends Jugadores{
 		return "Equipo [ListaJugadores=" + ListaJugadores + ", capitulos=" + capitulos + "]";
 	}
 	
-	public static String ListaJugadores(String username){
-		Jugadores jugadores=new Jugadores(username, null, null);
-		
-		if (username<=4) {
-			JOptionPane.showMessageDialog(null, "El equipo ya tiene 4 jugadores.");
-        } else {
-        	JOptionPane.showMessageDialog(null, "El equipo no tiene 4 jugadores.");
-        }
-		return username;	
+	public static double ListaJugadores(double username){
+		Jugadores jugadores=new Jugadores(username, vivo, eliminado);
+			
 	}
 	 //public boolean calcularPuntosSupervivientes() {
 		 // int puntos = 0;
@@ -60,13 +57,13 @@ public class Equipo extends Jugadores{
         
 	 //}
 
-    public int calcularPuntosZombies() {
-    	ListaJugadores(ListaJugadores);
-        int dañoTotal = (int) (Math.random() * 600);
-        int puntos = dañoTotal;
-        if (dañoTotal >= 500) {
-            puntos += 25; 
-        }
-        return puntos;
-    }
+	//public int calcularPuntosZombies() {
+	//ListaJugadores(ListaJugadores);
+	//  int dañoTotal = (int) (Math.random() * 600);
+	// int puntos = dañoTotal;
+	// if (dañoTotal >= 500) {
+	//     puntos += 25; 
+	// }
+// return puntos;
+	//}
 }	
