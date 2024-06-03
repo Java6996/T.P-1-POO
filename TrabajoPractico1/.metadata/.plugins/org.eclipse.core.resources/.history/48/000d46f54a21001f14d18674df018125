@@ -1,0 +1,52 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+import javax.swing.JOptionPane;
+
+public class Equipo extends Jugadores{
+	public Equipo(String username, String vivo, String eliminado) {
+		super(username, vivo, eliminado);
+		// TODO Auto-generated constructor stub
+	}
+	private LinkedList<Jugadores> ListaJugadores=new LinkedList<Jugadores>();
+	private int capitulos;
+	
+	public LinkedList<Jugadores> getListaJugadores() {
+		return ListaJugadores;
+	}
+
+	public void setListaJugadores(LinkedList<Jugadores> listaJugadores) {
+		ListaJugadores = listaJugadores;
+	}
+
+	public int getCapitulos() {
+		return capitulos;
+	}
+
+	public int setCapitulos(int capitulos) {
+		return this.capitulos = capitulos;
+	}
+	@Override
+	public String toString() {
+		return "Equipo [ListaJugadores=" + ListaJugadores + ", capitulos=" + capitulos + "]";
+	}
+	public boolean Capitulos(int capitulos){
+		capitulos=this.setCapitulos(getCapitulos());
+		if (this.setCapitulos(capitulos)<=5) {
+			return true;
+	} else {
+			return false;
+	}
+}
+	public static LinkedList ListaJugadores(LinkedList ListaJugadores){
+		ListaJugadores.add(ListaJugadores);
+		if (ListaJugadores.size()<=4) {
+			ListaJugadores.add(ListaJugadores);
+        } else {
+            JOptionPane.showMessageDialog(null, "El equipo ya tiene 4 jugadores.");
+        }
+		return ListaJugadores;
+		
+	}
+}

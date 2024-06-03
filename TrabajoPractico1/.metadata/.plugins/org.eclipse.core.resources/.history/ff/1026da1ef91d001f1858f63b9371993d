@@ -1,0 +1,8 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+public class Equipo extends Jugadores{
+
+
+}

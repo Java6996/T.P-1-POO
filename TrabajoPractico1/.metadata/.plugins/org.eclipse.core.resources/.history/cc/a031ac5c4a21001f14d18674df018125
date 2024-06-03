@@ -1,0 +1,42 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+public class GestorEquipos extends Equipo{
+
+	public GestorEquipos(String username, String vivo, String eliminado) {
+		super(username, vivo, eliminado);
+		// TODO Auto-generated constructor stub
+	}
+	private Equipo supervivientes;
+    private Equipo zombies;
+	public Equipo getSupervivientes() {
+		return supervivientes;
+	}
+	public void setSupervivientes(Equipo supervivientes) {
+		this.supervivientes = supervivientes;
+	}
+	public Equipo getZombies() {
+		return zombies;
+	}
+	public void setZombies(Equipo zombies) {
+		this.zombies = zombies;
+	}
+	@Override
+	public String toString() {
+		return "GestorEquipos [supervivientes=" + supervivientes + ", zombies=" + zombies + "]";
+	}
+	 public void agregarJugadorSuperviviente(Jugadores jugador) {
+	        supervivientes.getListaJugadores();
+	    }
+
+	    public void agregarJugadorZombie(Jugadores jugador) {
+	        zombies.getListaJugadores();
+	    }
+	    public void rotarEquipos() {
+	        Equipo temp = supervivientes;
+	        supervivientes = zombies;
+	        zombies = temp;
+	    }
+	
+	}

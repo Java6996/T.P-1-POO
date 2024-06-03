@@ -1,0 +1,75 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+import javax.swing.JOptionPane;
+
+public class Equipo extends Jugadores{
+	public Equipo(String username, String vivo, String eliminado) {
+		super(username, vivo, eliminado);
+		// TODO Auto-generated constructor stub
+	}
+	private LinkedList<Jugadores> ListaJugadores=new LinkedList<Jugadores>();
+	private int capitulos;
+	
+	public LinkedList<Jugadores> getListaJugadores() {
+		return ListaJugadores;
+	}
+
+	public void setListaJugadores(LinkedList<Jugadores> listaJugadores) {
+		ListaJugadores = listaJugadores;
+	}
+
+	public int getCapitulos() {
+		return capitulos;
+	}
+
+	public int setCapitulos(int capitulos) {
+		this.capitulos = capitulos;
+	}
+	@Override
+	public String toString() {
+		return "Equipo [ListaJugadores=" + ListaJugadores + ", capitulos=" + capitulos + "]";
+	}
+	public boolean Capitulos(int capitulos){
+		capitulos=this.setCapitulos(getCapitulos());
+		if (this.setCapitulos(capitulos)<=5) {
+			return true;
+	} else {
+			return false;
+	}
+}
+	public static LinkedList ListaJugadores(LinkedList ListaJugadores){
+		ListaJugadores.add(ListaJugadores);
+		if (ListaJugadores.size()<=4) {
+			ListaJugadores.add(ListaJugadores);
+        } else {
+            JOptionPane.showMessageDialog(null, "El equipo ya tiene 4 jugadores.");
+        }
+		return ListaJugadores;	
+	}
+	public int calcularPuntosSupervivientes() {
+        int puntos = 0;
+        boolean todosVivos = true;
+        for (Jugadores jugador : ListaJugadores) {
+            if (jugador.isVivo()) {
+                puntos += 500 / ListaJugadores.size();
+            } else {
+                todosVivos = false;
+            }
+        }
+        if (todosVivos) {
+            puntos += 100;
+        }
+        return puntos;
+    }
+
+    public int calcularPuntosZombies() {
+        int dañoTotal = (int) (Math.random() * 600); // Daño aleatorio entre 0 y 600
+        int puntos = dañoTotal;
+        if (dañoTotal >= 500) {
+            puntos += 25; // Bonificación por daño alto
+        }
+        return puntos;
+    }
+}	

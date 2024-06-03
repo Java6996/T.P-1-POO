@@ -1,0 +1,14 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+public class GestorEquipos extends Equipo{
+
+	public GestorEquipos(String username, String equipos, int puntos) {
+		super(username, equipos, puntos);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+}

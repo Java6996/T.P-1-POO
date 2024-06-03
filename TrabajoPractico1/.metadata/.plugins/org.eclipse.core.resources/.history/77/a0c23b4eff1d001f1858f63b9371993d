@@ -1,0 +1,13 @@
+package tpn1poo;
+
+import java.util.LinkedList;
+
+public class Equipo extends Jugadores{
+	private LinkedList<Jugadores> ListaJugadores=new LinkedList<Jugadores>();
+	public Equipo(String username, int puntos) {
+		super(username, puntos);
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

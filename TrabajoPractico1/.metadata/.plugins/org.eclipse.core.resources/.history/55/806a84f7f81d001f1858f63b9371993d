@@ -1,0 +1,8 @@
+package tpn1poo;
+
+public class Jugadores {
+	private String username;
+	private String equipos;
+	private int puntos; 
+	
+}

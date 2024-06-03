@@ -1,0 +1,18 @@
+package tpn1poo;
+
+import javax.swing.JOptionPane;
+
+class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Jugadores jugadores=new Jugadores(null);
+		
+	}
+	public String Jugadores(String username) {
+		for (int i = 0; i <=7; i++) {
+			username=JOptionPane.showInputDialog("Ingrese el nombre de usuario del jugador " + i);
+		}
+		return username;
+	}
+}

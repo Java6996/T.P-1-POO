@@ -1,0 +1,12 @@
+package tpn1poo;
+
+import javax.swing.JOptionPane;
+
+class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Jugadores jugadores=new Jugadores(null);
+		
+	}
+}

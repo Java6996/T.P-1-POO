@@ -1,0 +1,36 @@
+package tpn1poo;
+
+public class Jugadores {
+	private String username;
+	private String equipos;
+	private int puntos;
+	public Jugadores(String username, String equipos, int puntos) {
+		super();
+		this.username = username;
+		this.equipos = equipos;
+		this.puntos = puntos;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getEquipos() {
+		return equipos;
+	}
+	public void setEquipos(String equipos) {
+		this.equipos = equipos;
+	}
+	public int getPuntos() {
+		return puntos;
+	}
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+	@Override
+	public String toString() {
+		return "Jugadores [username=" + username + ", equipos=" + equipos + ", puntos=" + puntos + "]";
+	} 
+	
+}
